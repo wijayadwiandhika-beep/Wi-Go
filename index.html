@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Go - Jual Gold Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="wi.png" alt="Logo" class="logo-bulat">
+                <span>Wi-Go</span>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Daftar Harga</a></li>
+                <li><a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a></li>
+                <li><a href="https://whatsapp.com/channel/XXXXXXXX" target="_blank">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Selamat datang di Wi-Go</h1>
+            <p>Tempat Jual Gold Game Aman & Terpercaya</p>
+            <a href="#produk" class="btn-main">Lihat Harga Gold</a>
+        </div>
+    </section>
+
+    <main class="container" id="produk">
+        <h2 class="section-title">Daftar Game</h2>
+        <div class="game-grid">
+
+            <div class="game-card" onclick="pilihGame('Rucoy Online')">
+                <img src="https://i.ytimg.com/vi/O4cyx7Q53SM/maxresdefault.jpg" alt="Rucoy Online">
+                <h3>Rucoy Online</h3>
+            </div>
+
+            <div class="game-card" onclick="pilihGame('Heartwood Online')">
+                <img src="https://www.mmo.it/wp-content/uploads/2023/08/heartwood-online-mmo.it_.jpg"
+                    alt="Heartwood Online">
+                <h3>Heartwood Online</h3>
+            </div>
+
+            <div class="game-card" onclick="pilihGame('Curse of Aros')">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.z4JqrWkxMJA4NerKc9Mg6QHaEK?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+                    alt="Curse of Aros">
+                <h3>Curse of Aros</h3>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Detail Pesanan</h2>
+
+            <div class="form-group">
+                <label>ID / Username Game:</label>
+                <input type="text" id="userId" placeholder="Contoh: WiGoPlayer#123">
+            </div>
+
+            <label>Pilih Jumlah Gold:</label>
+            <div class="price-list" id="priceOptions">
+            </div>
+
+            <label>Pilih Metode Pembayaran:</label>
+            <div class="payment-grid">
+                <div class="pay-item" onclick="setPayment('DANA')">DANA</div>
+                <div class="pay-item" onclick="setPayment('SEABANK')">SEABANK</div>
+                <div class="pay-item" onclick="setPayment('QRIS')">QRIS</div>
+            </div>
+
+            <button class="btn-wa" onclick="kirimPesanWA()">
+                Pesan via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <section class="testimoni">
+    <h2 class="section-title">Testimoni Pembeli</h2>
+    <p class="testimoni-desc">
+        Lihat langsung testimoni asli dari pelanggan kami melalui Saluran WhatsApp resmi Wi-Go.id
+    </p>
+    <a href="https://whatsapp.com/channel/XXXXXXXX"
+       target="_blank"
+       class="btn-testimoni">
+        🔗 Lihat Testimoni di WhatsApp
+    </a>
+</section>
+
+    <footer>
+        <p>&copy; 2025 <strong>Wi-Go.id</strong>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> 
+    <!-- lanjut besok ya -->
+</body>
+
+</html>

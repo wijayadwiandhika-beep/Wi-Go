@@ -1,0 +1,309 @@
+/* TETAPKAN CODINGAN AWAL ANDA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1e293b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-bulat {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #38bdf8;
+    object-fit: cover;
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #38bdf8;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* GAME GRID */
+.container {
+    padding: 50px 5%;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #38bdf8;
+}
+
+.game-card img {
+    width: 100%;
+    height: 140px;        /* ukuran seragam */
+    object-fit: cover;   /* potong rapi, tidak gepeng */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.game-card img:hover {
+    transform: scale(1.05);
+}
+
+/* --- STYLE BARU UNTUK MODAL & PEMBAYARAN --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: #1e293b;
+    margin: 5% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    border: 1px solid #38bdf8;
+    color: white;
+}
+
+.close-btn {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 8px;
+}
+
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.price-item {
+    background: #334155;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-item.active {
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.pay-item {
+    background: #0f172a;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #334155;
+}
+
+.pay-item.active {
+    border-color: #38bdf8;
+    background: #1e293b;
+    color: #38bdf8;
+}
+
+.btn-wa {
+    width: 100%;
+    padding: 15px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1e293b;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    /* Tetap gunakan logika toggle Anda */
+}
+
+.testimoni {
+    padding: 60px 5%;
+    text-align: center;
+    background: #1e293b;
+    border-top: 1px solid #334155;
+}
+
+.testimoni-desc {
+    margin: 15px auto 25px;
+    max-width: 500px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.btn-testimoni {
+    display: inline-block;
+    padding: 14px 35px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-testimoni:hover {
+    background: #16a34a;
+}
+
+/* ===== MOBILE MENU ===== */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #38bdf8;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: #1e293b;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 15px;
+        padding: 15px;
+        display: none;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 1rem;
+    }
+}
